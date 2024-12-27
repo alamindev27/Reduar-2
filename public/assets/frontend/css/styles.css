@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f1f100;
+}
+
+header{
+    margin-top: 0px;
+}
+
+.header-form-btn{
+    width: 35px;
+    height: 35px;
+    background-color: #4268C1;
+    border-radius: 50%;
+    color: #fff;
+}
+.navbar-link{
+    font-weight: 300;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: none;
+    border-color: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn-check:focus+.btn-info, .btn-info:focus {
+    color: #000;
+    background-color: none;
+    border-color: none;
+    box-shadow: none;
+}
+
+
+.view-more{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.section-title{
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.section-bg{
+    background-color: #F0F0F0;
+}
+.bolg-title-1{
+    font-size: 14px;
+}
+.blog-date-time-1{
+    font-size: 13px;
+}
+
+
+.title{
+    font-size: 14px;
+}
+.ratings{
+    font-size: 12px;
+}
+
+
+.right-area{
+    background-color: #0151A6;
+}
+
+.blog-image{
+    border-radius: 15px;
+}
+
+.read-more{
+    color: #fff;
+    background-color: #FA9A05;
+    border-radius: 15px;
+    padding: 0px 10px;
+}
+
+.common-rounded{
+    border-radius: 15px;
+}
+
+.risk-worning{
+    background-color: #1E3269;
+}
+
+
