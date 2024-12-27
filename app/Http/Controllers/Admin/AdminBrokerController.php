@@ -70,7 +70,7 @@ class AdminBrokerController extends Controller
             $arr = explode('/',setting()->author_image);
             $logo = end($arr);
             if ($logo != '1731077912-logo.webp' || $logo != 'assetsfx_logo.webp' || $logo != 'cpt-markets-logo.webp' || $logo != 'blackbull-logo.webp' || $logo != 'doo_prime_logo.webp') {
-                unlink(public_path($data->logo));
+                unlink($data->logo);
             }
 
             $file = $request->file('logo');

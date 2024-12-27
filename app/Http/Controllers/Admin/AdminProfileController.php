@@ -23,7 +23,7 @@ class AdminProfileController extends Controller
         $arr = explode('/', $user->avatar);
         $img = end($arr);
         if ($img != 'avatar.png') {
-            unlink(public_path($user->avatar));
+            unlink($user->avatar);
         }
         $user->update([
             'avatar' => 'uploads/avatar.png'
@@ -42,7 +42,7 @@ class AdminProfileController extends Controller
             $arr = explode('/', $user->avatar);
             $img = end($arr);
             if ($img != 'avatar.png') {
-                unlink(public_path($user->avatar));
+                unlink($user->avatar);
             }
 
             $file = $request->file('avatar');

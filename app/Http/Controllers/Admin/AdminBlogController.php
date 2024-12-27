@@ -94,7 +94,7 @@ class AdminBlogController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            unlink(public_path($data->image));
+            unlink($data->image);
 
             $file = $request->file('image');
             $logo = time().'-blog-image.'.$file->getClientOriginalExtension();

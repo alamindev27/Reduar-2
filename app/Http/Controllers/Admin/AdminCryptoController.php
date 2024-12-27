@@ -100,7 +100,7 @@ class AdminCryptoController extends Controller
             'description' => 'required | string',
         ]);
         if ($request->hasFile('coin_icon')) {
-            unlink(public_path($data->icon));
+            unlink($data->icon);
             $path = 'uploads/';
             $file2 = $request->file('coin_icon');
             $logo = time().'-coin-logo.'.$file2->getClientOriginalExtension();
@@ -132,7 +132,7 @@ class AdminCryptoController extends Controller
     public function destroy(string $id)
     {
         $data = Crypto::find($id);
-        unlink(public_path($data->icon));
+        unlink($data->icon);
         $data->delete();
         return back()->with('success', 'Deleted Successfully.');
     }

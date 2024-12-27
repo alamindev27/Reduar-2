@@ -48,7 +48,7 @@ class AdminBrokerPostController extends Controller
             $arr = explode('/', $data->logo);
             $oldLogo = end($arr);
             if ($oldLogo != 'sopn.webp') {
-                unlink(public_path($data->logo));
+                unlink($data->logo);
             }
 
             $file = $request->file('logo');
@@ -263,7 +263,7 @@ class AdminBrokerPostController extends Controller
         ]);
 
         if ($request->hasFile('logo')) {
-            unlink(public_path($data->logo));
+            unlink($data->logo);
 
             $file = $request->file('logo');
             $logo = time().'-broker-review-broker-logo.'.$file->getClientOriginalExtension();
@@ -338,7 +338,7 @@ class AdminBrokerPostController extends Controller
     public function destroy(string $id)
     {
         $data = BrokerPost::find($id);
-        unlink(public_path($data->logo));
+        unlink($data->logo);
         $data->delete();
         return redirect()->route('broker-review.index')->with('success', 'Deleted Successfully.');
     }

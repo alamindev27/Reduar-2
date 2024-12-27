@@ -120,7 +120,7 @@ class AdminAwardController extends Controller
         }
 
         if ($request->hasFile('logo')) {
-            unlink(public_path($data->logo));
+            unlink($data->logo);
 
             $path = 'uploads/';
             $file2 = $request->file('logo');

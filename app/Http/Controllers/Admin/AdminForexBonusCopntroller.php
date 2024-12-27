@@ -133,7 +133,7 @@ class AdminForexBonusCopntroller extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            unlink(public_path($data->image));
+            unlink($data->image);
 
             $file = $request->file('image');
             $logo = time().'-blog-image.'.$file->getClientOriginalExtension();
@@ -174,7 +174,7 @@ class AdminForexBonusCopntroller extends Controller
     public function destroy(string $id)
     {
         $data = ForexBonus::find($id);
-        unlink(public_path($data->image));
+        unlink($data->image);
         $data->delete();
         return back()->with('success', 'Deleted Successfully.');
     }

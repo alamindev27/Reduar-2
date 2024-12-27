@@ -28,7 +28,7 @@ class AdminSettingController extends Controller
             $arr1 = explode('/',setting()->author_image);
             $logo1 = end($arr1);
             if ($logo1 != 'avatar.png') {
-                unlink(public_path(setting()->author_image));
+                unlink(setting()->author_image);
             }
             $file1 = $request->file('author_image');
             $author_image = time().'-author-iamge.'.$file1->getClientOriginalExtension();
@@ -43,7 +43,7 @@ class AdminSettingController extends Controller
             $arr1 = explode('/',setting()->site_logo);
             $logo1 = end($arr1);
             if ($logo1 != 'default-logo.png') {
-                unlink(public_path(setting()->site_logo));
+                unlink(setting()->site_logo);
             }
             $file1 = $request->file('site_logo');
             $fileName1 = time().'-logo.'.$file1->getClientOriginalExtension();
@@ -57,7 +57,7 @@ class AdminSettingController extends Controller
             $arr3 = explode('/',setting()->site_favicon);
             $logo3 = end($arr3);
             if ($logo3 != 'default-favicon.png') {
-                unlink(public_path(setting()->site_favicon));
+                unlink(setting()->site_favicon);
             }
             $file3 = $request->file('site_favicon');
             $fileName3 = time().'-favicon.'.$file3->getClientOriginalExtension();
