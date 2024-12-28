@@ -44,7 +44,7 @@
 
 
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link {{ Request::url() == route('subcategory.create') || Request::url() == route('subcategory.index') ? '' : 'collapsed' }}" data-bs-target="#subcategory-nav" data-bs-toggle="collapse" href="#">
                 <span>Sub Categories</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -60,7 +60,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
 
         <li class="nav-item">
             <a class="nav-link {{ Request::url() == route('best-forex-broker-sub-category.create') || Request::url() == route('best-forex-broker-sub-category.index') ? '' : 'collapsed' }}" data-bs-target="#bestForexBrokerSubCategory-nav" data-bs-toggle="collapse" href="#">

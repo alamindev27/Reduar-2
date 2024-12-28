@@ -378,28 +378,4 @@
         ]
     });
 </script>
-
-<script>
-    function setSubCategory(el){
-
-        var catId = $(el).val();
-        if (catId == '') {
-            $('#subcategory').prop('disabled', true);
-        } else {
-            $('#subcategory').removeAttr('disabled');
-        }
-        $.ajax({
-            type: 'POST',
-            url: '{{ route('admin.getSubCategory') }}',
-            data: {
-                catId: catId
-            },
-            success: function(data) {
-                $('#subcategory').html(data);
-                // console.log(data);
-
-            },
-        });
-    }
-</script>
 @endsection
